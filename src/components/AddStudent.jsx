@@ -23,7 +23,18 @@ function AddStudent ({handleAddStudent}){
     }
 
     return(
-      <form onSubmit={() => handleAddStudent(event, student)}>
+      <form onSubmit={() => {
+        handleAddStudent(event, student)
+        setStudent({
+          fullName: "",
+          email:  "",
+          phone: "",
+          program: "",
+          image: "",
+          graduationYear: 2023,
+          graduated: false
+      });
+      }}>
         <span>Add a Student</span>
         <div>
           <label>
